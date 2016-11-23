@@ -1,0 +1,10 @@
+version: '2'
+services:
+ bind:
+   image: andrewglass3/bind
+   ports:
+   - "53:53"
+   restart: always
+   volumes:
+   - /etc/bind:/data/etc/bind:rw
+   - /var/lib/bind:/data/lib/bind:rw
